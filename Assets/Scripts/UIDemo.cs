@@ -19,8 +19,13 @@ public class UIDemo : MonoBehaviour
         }
     }
 
-    void ChangeColour()
+    public void ChangeColour()
     {
         sr.color = Random.ColorHSV();
+    }
+
+    public void SetScaleBig(float scale)
+    {
+        transform.localScale = Vector3.one * scale;
     }
 }
