@@ -27,5 +27,6 @@ public class UIDemo : MonoBehaviour
     public void SetScaleBig(float scale)
     {
         transform.localScale = Vector3.one * scale;
-    }
+    } 
+    
 }
