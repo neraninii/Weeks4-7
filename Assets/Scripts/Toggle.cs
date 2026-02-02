@@ -16,7 +16,7 @@ public class Toggle : MonoBehaviour
         //else if(gameObject.activeInHierarchy == false)
         //{
         //    // (otherwise) if the bird is not active, call SetActive and pass true 
-            gameObject.SetActive(true);
+            //gameObject.SetActive(true);
         //}
 
         gameObject.SetActive(!gameObject.activeInHierarchy);
