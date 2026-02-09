@@ -1,0 +1,31 @@
+
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class barrel : MonoBehaviour
+{
+    public float value;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        mousePos.z = 0; 
+
+        if(mousePos.y > 0 && mousePos.y < 5)
+        {
+            Vector3 direction = mousePos - transform.position; 
+
+            transform.right = direction; 
+        }
+       
+
+    
+        
+    }
+}
