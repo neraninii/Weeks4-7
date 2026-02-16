@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class treatmovement : MonoBehaviour
 {
+    //Initializing Variables
     public float rotationSpeed = 10;
     public bool drop = false;
 
@@ -23,17 +24,20 @@ public class treatmovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Tracking the treat's position and adding onto the y posiition for movement
 
         Vector3 newRotation = transform.eulerAngles;
         newRotation.z += rotationSpeed * Time.deltaTime; 
         transform.eulerAngles = newRotation; 
 
+        //setting drop boolean as for keyboard press
         if(Keyboard.current.anyKey.isPressed == true)
         {
             drop = true; 
 
         }
 
+        //Tracking the treat's position and adding onto the y posiition for movement
         if (drop == true)
         {
             Vector2 newPosition = transform.position; 
@@ -45,7 +49,7 @@ public class treatmovement : MonoBehaviour
 
     }
     
-
+    //Function to change the size of the treats
     public void BigTreat(float scale)
     {
         transform.localScale = Vector3.one * scale;

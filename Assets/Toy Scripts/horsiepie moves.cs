@@ -1,9 +1,9 @@
 
-
 using UnityEngine;
 
 public class horsiepiemoves : MonoBehaviour
 {
+    //Initializing Variables
     public float speed = 2;
     
 
@@ -16,6 +16,7 @@ public class horsiepiemoves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Tracking the horse's position and adding onto the x posiition for movement
     
         Vector2 newPos = transform.position; 
 
@@ -23,7 +24,7 @@ public class horsiepiemoves : MonoBehaviour
 
         transform.position = newPos;
 
-
+        //Setting bounds for the horse to bounce off and loop
         if(transform.position.x < -3 || transform.position.x > 5)
         {
             speed *= -1;
